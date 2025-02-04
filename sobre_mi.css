@@ -1,0 +1,220 @@
+/* ===== Estilos Generales ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* ===== Modo Oscuro ===== */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+.dark-mode .nav-link {
+  color: #f8f9fa;
+}
+
+.dark-mode .nav-container {
+  background-color: #111;
+}
+
+.dark-mode .contenido-principal {
+  background-color: #2d2d2d;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .social-icon {
+  color: #f8f9fa;
+}
+
+.dark-mode .footer-container {
+  background: #111;
+  color: #f8f9fa;
+}
+/* ===== Modo Oscuro - Ajustes Adicionales ===== */
+.dark-mode .iconos a {
+  color: #f8f9fa !important; /* Cambia los iconos de redes sociales a blanco */
+}
+
+.dark-mode .titulo-principal {
+  color: #f8f9fa !important; /* Cambia el título principal "Mi Trayectoria" a blanco */
+}
+
+/* ===== Barra de Navegación ===== */
+.nav-container {
+  background: #2c3e50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* ===== Contenido Principal ===== */
+.contenido-principal {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-principal {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* ===== Línea de Tiempo ===== */
+.linea-tiempo {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.linea-tiempo::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #3498db;
+  transform: translateX(-50%);
+}
+
+.evento {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 45%;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.evento:nth-child(odd) {
+  margin-left: auto;
+}
+
+.fecha {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3498db;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.detalle h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.detalle p {
+  color: #666;
+  line-height: 1.4;
+}
+
+/* ===== Redes Sociales ===== */
+.redes-sociales {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.iconos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.iconos a {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  transition: color 0.3s ease;
+}
+
+.iconos a:hover {
+  color: #3498db;
+}
+
+/* ===== Footer ===== */
+.footer-container {
+  background: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 4rem;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .linea-tiempo::before {
+    left: 20px;
+  }
+
+  .evento {
+    width: 80%;
+    margin-left: 2.5rem !important;
+  }
+
+  .fecha {
+    left: -35px;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contenido-principal {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .iconos {
+    flex-direction: column;
+  }
+}

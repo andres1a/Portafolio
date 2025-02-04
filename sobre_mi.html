@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre mí - Andrés Solano</title>
+    <link rel="stylesheet" href="sobre_mi.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Inicio</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+      </ul>
+      <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <ion-icon name="moon-outline" class="dark-mode-icon"></ion-icon>
+      </button>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+      <h1 class="titulo-principal">Mi Trayectoria</h1>
+
+      <div class="linea-tiempo">
+        <div class="evento">
+          <div class="fecha">2021</div>
+          <div class="detalle">
+            <h3>Bachillerato Técnico</h3>
+            <p>Concluí mis estudios secundarios con especialización técnica.</p>
+          </div>
+        </div>
+
+        <div class="evento">
+          <div class="fecha">2022</div>
+          <div class="detalle">
+            <h3>Inicio Universitario</h3>
+            <p>
+              Comencé mis estudios en Ingeniería de Sistemas en la Universidad
+              Simón Bolívar.
+            </p>
+          </div>
+        </div>
+
+        <div class="evento">
+          <div class="fecha">2025</div>
+          <div class="detalle">
+            <h3>7mo Semestre</h3>
+            <p>
+              Actualmente cursando el séptimo semestre de mi carrera
+              universitaria.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="redes-sociales">
+        <ul class="iconos">
+          <li>
+            <a
+              href="https://www.instagram.com/andressolanomc90/"
+              target="_blank"
+            >
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100055453456414"
+              target="_blank"
+            >
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=573013963852"
+              target="_blank"
+            >
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+      <p>&copy; 2025 Andrés Solano. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el modo oscuro -->
+    <script>
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      const body = document.body;
+
+      if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+      }
+
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        localStorage.setItem(
+          "dark-mode",
+          body.classList.contains("dark-mode") ? "enabled" : "disabled"
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrés Solano | Desarrollador Web</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        <li><a href="sobre_mi.html" class="nav-link">Sobre mí</a></li>
+      </ul>
+      <!-- Botón de modo oscuro -->
+      <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <ion-icon name="moon-outline" class="dark-mode-icon"></ion-icon>
+      </button>
+    </nav>
+
+    <!-- Sección Hero -->
+    <main class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">¿Quién soy?</h1>
+        <div class="hero-text">
+          <p>
+            ¡Hola! Soy <strong>Andrés Solano</strong>, estudiante de 7mo
+            semestre de Ingeniería de Sistemas en la Universidad Simón Bolívar.
+            Mi pasión es el desarrollo web y mi objetivo es crear soluciones
+            digitales innovadoras que impacten positivamente en las personas.
+          </p>
+          <a href="mis_proyectos.html" class="cta-button">Ver proyectos</a>
+        </div>
+      </div>
+
+      <!-- Foto personal -->
+      <div class="hero-image">
+        <img
+          src="mifoto.jpg"
+          alt="Foto de Andrés Solano"
+          class="profile-image"
+        />
+        <h1>Andrés Solano</h1>
+        <h2>Desarrollador Front-End</h2>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="social-container">
+        <ul class="social-icons">
+          <li>
+            <a
+              href="https://www.instagram.com/andressolanomc90/"
+              target="_blank"
+              class="social-link"
+            >
+              <ion-icon name="logo-instagram" class="social-icon"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100055453456414"
+              target="_blank"
+              class="social-link"
+            >
+              <ion-icon name="logo-facebook" class="social-icon"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=573013963852"
+              target="_blank"
+              class="social-link"
+            >
+              <ion-icon name="logo-whatsapp" class="social-icon"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+      <p>&copy; 2025 Andrés Solano. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el modo oscuro -->
+    <script>
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      const body = document.body;
+
+      // Verificar preferencia del usuario
+      if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+      }
+
+      // Alternar modo oscuro
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("dark-mode", "enabled");
+        } else {
+          localStorage.setItem("dark-mode", "disabled");
+        }
+      });
+    </script>
+  </body>
+</html>
