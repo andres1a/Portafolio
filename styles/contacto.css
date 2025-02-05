@@ -86,6 +86,9 @@ h2 {
 }
 
 /* ===== Formulario de Contacto ===== */
+.contenido-principal h2 {
+  margin-bottom: 5%;
+}
 .formulario-contacto {
   display: flex;
   flex-direction: column;
