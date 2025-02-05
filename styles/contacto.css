@@ -1,0 +1,214 @@
+/* ===== Estilos Generales ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+/* ===== Modo Oscuro ===== */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+}
+
+/* Navbar */
+.nav-container {
+  background: #2c3e50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db;
+}
+
+.dark-mode .nav-link {
+  color: #f8f9fa;
+}
+
+.dark-mode .nav-container {
+  background-color: #111;
+}
+
+/* Botón de Modo Oscuro */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+/* ===== Contenido Principal ===== */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* ===== Modo Oscuro - Contenido Principal ===== */
+.dark-mode .contenido-principal {
+  background-color: #2d2d2d;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .contenido-principal h2 {
+  color: #f8f9fa !important; /* Título "Mi Trayectoria" en blanco */
+}
+
+/* ===== Formulario de Contacto ===== */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.formulario-contacto label {
+  font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+/* ===== Modo Oscuro - Formulario ===== */
+.dark-mode .formulario-contacto {
+  background-color: #111 !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .formulario-contacto label,
+.dark-mode .formulario-datos {
+  color: #f8f9fa !important;
+}
+
+.dark-mode .formulario-contacto input,
+.dark-mode .formulario-contacto textarea {
+  background-color: #222 !important;
+  color: #f8f9fa !important;
+  border: 1px solid #444 !important;
+}
+
+.dark-mode .formulario-contacto input::placeholder,
+.dark-mode .formulario-contacto textarea::placeholder {
+  color: #bbb !important;
+}
+
+/* Botón de Envío */
+.formulario-contacto button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.formulario-contacto button:hover {
+  background-color: #2c3e50;
+}
+
+/* ===== Redes Sociales ===== */
+.redes-sociales {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.Iconos {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin-top: 50px;
+}
+
+.Iconos a {
+  font-size: 2rem;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+  display: flex;
+}
+
+.Iconos a:hover {
+  color: #3498db;
+}
+
+/* ===== Modo Oscuro - Redes Sociales ===== */
+.dark-mode .Iconos a {
+  color: #f8f9fa !important;
+}
+
+.dark-mode .Iconos a:hover {
+  color: #3498db !important;
+}
+
+/* ===== Footer ===== */
+.footer-container {
+  background: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 4rem;
+}
+
+/* ===== Modo Oscuro - Footer ===== */
+.dark-mode .footer-container {
+  background: #111;
+  color: #f8f9fa;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 480px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contenido-principal {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .Iconos {
+    flex-direction: column;
+  }
+}
