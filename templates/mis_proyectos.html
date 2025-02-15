@@ -4,23 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/mis_proyectos.css
+    ">
+    <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
   </head>
   <body>
-    <a href="index.html"> Ir a inicio</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="sobre_mi.html">Sobre mi</a>
+    <!-- Menú -->
+    <nav class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link"> Ir a inicio</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        <li><a href="sobre_mi.html" class="nav-link">Sobre mi</a></li>
+      </ul>
+      <!-- Modo oscuro -->
+      <button id="dark-mode-toggle" class="dark-mode-toggle">
+        <ion-icon name="moon-outline" class="dark-mode-icon"></ion-icon>
+      </button>
+    </nav>
+
+    <!-- Card 1 -->
+    
+    <div class="card-container">
+      <div class="card">
+        <figure> 
+          <img src="../images/jpgtopdf.png">
+        </figure>
+        <div class="contenido-card"></div>
+        <h3>jpgtopdf</h3>
+        <p>Realiza facilmente conversiones de tus fotos a pdf con tan solo undir un botón!!!</p>
+        <a class="boton" href="#" >Leer más</a>
+      </div>
+      <div class="card">
+        <figure> 
+          <img src="../images/motomoto.jpg">
+        </figure>
+        <div class="contenido-card"></div>
+        <h3>Vidamotos P.O.S</h3>
+        <p>Punto de venta del taller de venta de repuestos y todo lo relacionado con el mundo motero!!</p>
+        <a href="#">Leer más</a>
+      </div>
+    </div>
+
+    
+
+     <!-- Redes sociales -->
     <ul class="Iconos">
       <li>
-        <a href="https://www.instagram.com/andressolanomc90/" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon>
+        <a href="https://github.com/andres1a" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
         </a>
       </li>
       <li>
         <a
-          href="https://www.facebook.com/profile.php?id=100055453456414"
+          href="https://www.linkedin.com/in/andr%C3%A9s-solano-lora-679ab434b/"
           target="_blank"
         >
-          <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-linkedin" class="social-icon"></ion-icon>
         </a>
       </li>
       <li>
@@ -32,5 +78,30 @@
         </a>
       </li>
     </ul>
+     <!-- Footer -->
+     <footer class="footer-container">
+      <p>&copy; 2025 Andrés Solano. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script para el modo oscuro -->
+    <script>
+      const darkModeToggle = document.getElementById("dark-mode-toggle");
+      const body = document.body;
+
+      // Verificar preferencia del usuario
+      if (localStorage.getItem("dark-mode") === "enabled") {
+        body.classList.add("dark-mode");
+      }
+
+      // Alternar modo oscuro
+      darkModeToggle.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          localStorage.setItem("dark-mode", "enabled");
+        } else {
+          localStorage.setItem("dark-mode", "disabled");
+        }
+      });
+    </script>
   </body>
 </html>
